@@ -1,0 +1,66 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "calibri light";
+    font-size: 22px;
+}
+
+/*-------------------------------------NAVAGATION*/
+
+header {
+    width: 100%;
+    box-shadow: 0px 3px 8px 0px black;
+}
+
+header nav {
+    font-size: 22px;
+    background-color: #444c5c;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header nav ul {
+    list-style-type: none;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    float: left;
+}
+
+header nav ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 18px 21px;
+    text-decoration: none;
+}
+
+header nav ul li a:hover {
+    background-color: #111;
+    opacity: 0.9;
+}
+
+#activeMenu {
+    background-color: #4CAF50;
+}
+
+ul#socialMediaIcons {
+    position: fixed;
+    top: 22px;
+    right: 8%;
+    width: 10%;
+    list-style-type: none;
+    text-align: center;
+    margin: inherit;
+    padding: inherit;
+}
+
+ul#socialMediaIcons > li {
+    display: inline;
+    padding: 2px;
+}
