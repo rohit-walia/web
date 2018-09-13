@@ -50,7 +50,7 @@ header nav ul li a:hover {
 }
 
 ul#socialMediaIcons {
-    position: fixed;
+    position: absolute;
     top: 22px;
     right: 8%;
     width: 10%;
