@@ -2,7 +2,7 @@ html, body {
   height: 100%;
 }
 
-.job-guardian, .job-gateGourmet {
+.job-guardian, .job-gateGourmet, .job-yorkUni {
     height: 100%;
     opacity: 0.8;
 
@@ -21,9 +21,13 @@ html, body {
     background-image: url("../images/airCanada.png");
 }
 
+.job-yorkUni {
+    background-image: url("../images/yorkUni.jpg");
+}
+
 /* Turn off parallax scrolling for tablets and phones. Increase the pixels if needed */
 @media only screen and (max-device-width: 1366px) {
-    .parallax1, .parallax2 {
+    .job-guardian, .job-gateGourmet, .job-yorkUni {
         background-attachment: scroll;
     }
 }
@@ -33,5 +37,5 @@ th {
 }
 
 td {
-    padding: 0 10% 5% 10%;
+    padding: 0 10% 3% 10%;
 }
