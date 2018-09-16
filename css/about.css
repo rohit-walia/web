@@ -2,7 +2,7 @@ html, body {
   height: 100%;
 }
 
-.parallax1, .parallax2 {
+.job-guardian, .job-gateGourmet {
     height: 100%;
     opacity: 0.8;
 
@@ -13,11 +13,11 @@ html, body {
     background-size: cover;
 }
 
-.parallax1 {
+.job-guardian {
     background-image: url("../images/theGuardian.jpg");
 }
 
-.parallax2 {
+.job-gateGourmet {
     background-image: url("../images/airCanada.png");
 }
 
