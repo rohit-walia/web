@@ -13,4 +13,5 @@ body {
   position: absolute;
   top: 20%;
   right: 10%;
+  opacity: 0;
 }

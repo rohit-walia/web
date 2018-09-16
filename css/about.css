@@ -2,12 +2,9 @@ html, body {
   height: 100%;
 }
 
-.parallax {
-    /* The image used */
-    background-image: url("../images/about-me-background.jpg");
-
-    /* Full height */
+.parallax1, .parallax2 {
     height: 100%;
+    opacity: 0.8;
 
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
@@ -16,9 +13,25 @@ html, body {
     background-size: cover;
 }
 
+.parallax1 {
+    background-image: url("../images/theGuardian.jpg");
+}
+
+.parallax2 {
+    background-image: url("../images/airCanada.png");
+}
+
 /* Turn off parallax scrolling for tablets and phones. Increase the pixels if needed */
 @media only screen and (max-device-width: 1366px) {
-    .parallax {
+    .parallax1, .parallax2 {
         background-attachment: scroll;
     }
+}
+
+th {
+    height: 80px;
+}
+
+td {
+    padding: 0 10% 5% 10%;
 }

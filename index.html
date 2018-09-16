@@ -8,14 +8,17 @@
     Welcome!
   </title>
 
-	<link rel="stylesheet" type="text/css" href="css/styles.css">
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
   <link rel="stylesheet" type="text/css" href="css/index.css">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
   <script>
-    $(document).ready(function() {
-      $(".welcomeMsg").fadeIn(2000).removeClass("hidden");
+    $(window).on('load', function()
+    {
+      $(".welcomeMsg").animate( {right: "100px", opacity: 1}, 3000, function()
+      {
+        $("#sub-welcomeMsg").show();
+      });
     });
   </script>
 </head>
@@ -23,30 +26,26 @@
 <body>
 	<header>
 		<nav>
-    		<ul>
-  				<li id="activeMenu" style="margin-left:10%"><a href='index.html'>Home</a></li>
-  				<li><a href='src/about.html'>About</a></li>
-  				<li><a href='src/projects.html'>Projects</a></li>
-  				<li><a href='src/contact.html'>Contact</a></li>
-			</ul>
-		</nav>
-	</header>
+      <ul>
+        <li id="activeMenu" style="margin-left:10%"><a href='index.html'>Home</a></li>
+        <li><a href='src/about.html'>About</a></li>
+        <li><a href='src/projects.html'>Projects</a></li>
+        <li><a href='src/contact.html'>Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-	<ul id="socialMediaIcons">
-		<li>
-			<a href="https://www.facebook.com/rohit.walia.7">
-				<img src="images/fbicon.png" alt="fb icon error" style="height:50px">
-			</a>
-		</li>
-		<li>
-			<a href="http://www.linkedin.com/in/waliarohit">
-				<img src="images/linkedin.png" alt="linkedin icon error" style="height:50px">
-			</a>
-		</li>
-	</ul>
+  <ul id="socialMediaIcons">
+    <li>
+     <a href="https://www.facebook.com/rohit.walia.7"><img src="images/fbicon.png" alt="fb icon error" style="height:50px"></a>
+   </li>
+   <li>
+     <a href="http://www.linkedin.com/in/waliarohit"><img src="images/linkedin.png" alt="linkedin icon error" style="height:50px"></a>
+   </li>
+ </ul>
 
-<p class = "welcomeMsg" style = "display: none">
-  <span>Welcome, my name is Rohit Walia <br> and this is my personal web-space.</span>
+ <p class = "welcomeMsg">
+  <span>Welcome, my name is Rohit Walia</span> <br> <span id = "sub-welcomeMsg" style = "display: none">and this is my personal web-space.</span>
 </p>
 
 </body>
