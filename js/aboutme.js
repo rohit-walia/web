@@ -1,40 +1,54 @@
 function updateProgressBar() {
+
+  //the number of pixels an element's content is scrolled
   var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+
+  //get total scrollale area
   var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+
+  //the % of user has scrolled
   var scrolled = (winScroll / height) * 100;
-  var element = document.getElementById("pBar");
 
-  element.style.height = scrolled + "%";
+  //get window height in pixels
+  var winH = window.innerHeight || document.documentElement.clientHeight || document.getElementsByTagName('body')[0].clientHeight;
 
+  //get all milestone elements
+  var allStones = document.getElementsByClassName("milestone");
 
-  if(scrolled>1 && scrolled<15.8) {
-    var e = element.getElementsByTagName("p")[0];
-    e.innerHTML = "The Newspaper Boy";
-    e.style.top = scrolled + "%";
-    e.style.backgroundColor = "cyan";
+  //get element where text should be placed
+  var progressBarText = document.getElementsByClassName("progress-text")[0];
+
+  //update progress bar height attribute
+  document.getElementById("pBar").style.height = scrolled + "%";
+
+  //populate delta between milestone and window screen
+  var milestoneDelta = [];
+  for(var i=0; i<allStones.length; i++) {
+    milestoneDelta[i] = (allStones[i].getBoundingClientRect().top/winH)*100;
   }
-  else if(scrolled>22 && scrolled<36.5) {
-    var e = element.getElementsByTagName("p")[0];
-    e.innerHTML = "My first JAVA program";
-    e.style.top = scrolled + "%";
-    e.style.backgroundColor = "cyan";
+
+  //logic
+  if(milestoneDelta[0]>0 && milestoneDelta[0]<80) {
+    updateProgressBarText(progressBarText, "The newspaper boy", scrolled, "cyan");
   }
-  else if(scrolled>46.2 && scrolled<60.9) {
-    var e = element.getElementsByTagName("p")[0];
-    e.innerHTML = "My last undergraduate year";
-    e.style.top = scrolled + "%";
-    e.style.backgroundColor = "cyan";
+  else if (milestoneDelta[1]>0 && milestoneDelta[1]<100) {
+    updateProgressBarText(progressBarText, "My first JAVA program", scrolled, "cyan");
   }
-  else if(scrolled>74 && scrolled<89) {
-    var e = element.getElementsByTagName("p")[0];
-    e.innerHTML = "My first tech job";
-    e.style.top = scrolled + "%";
-    e.style.backgroundColor = "cyan";
+  else if (milestoneDelta[2]>0 && milestoneDelta[2]<100) {
+    updateProgressBarText(progressBarText, "My Last undergraduate year", scrolled, "cyan");
+  }
+  else if (milestoneDelta[3]>0 && milestoneDelta[3]<100) {
+    updateProgressBarText(progressBarText, "My first tech job", scrolled, "cyan");
   }
   else {
-    var e = element.getElementsByTagName("p")[0];
-    e.innerHTML = "";
-    e.style.top = scrolled + "%";
-    e.style.backgroundColor = "transparent";
+    updateProgressBarText(progressBarText, "", null, "transparent");
   }
+
+}
+
+
+function updateProgressBarText(element, text, scroll, bgColor) {
+  element.innerHTML = text;
+  element.style.top = scroll + "%";
+  element.style.backgroundColor = bgColor;
 }

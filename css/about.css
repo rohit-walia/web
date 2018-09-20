@@ -72,3 +72,12 @@ html, body {
   background: #4caf50;
   width: 100%;
 }
+
+.progress-text {
+  position: absolute;
+  top: 0%;
+  width: max-content;
+  left:100%;
+  background-color: transparent;
+  padding: 10px 25px 10px 25px;
+}
