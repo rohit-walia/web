@@ -12,8 +12,8 @@ html, body {
 }
 
 /* Create the parallax scrolling effect */
-.job-guardian, .job-gateGourmet, .job-yorkUni, .job-pcc {
-    height: 80%;
+.job-guardian, .job-gateGourmet, .job-yorkUni, .job-pcc, .hobbie-car, .hobbie-AI {
+    height: 77.5%;
     opacity: 0.8;
     background-attachment: fixed;
     background-position: center;
@@ -22,19 +22,27 @@ html, body {
 }
 
 .job-guardian {
-    background-image: url("../images/theGuardian.jpg");
+  background-image: url("../images/theGuardian.jpg");
 }
 
 .job-gateGourmet {
-    background-image: url("../images/airCanada.png");
+  background-image: url("../images/airCanada.png");
 }
 
 .job-yorkUni {
-    background-image: url("../images/yorkUni.jpg");
+  background-image: url("../images/yorkUni.jpg");
 }
 
 .job-pcc {
-    background-image: url("../images/pointclickcare.png");
+  background-image: url("../images/pointclickcare.png");
+}
+
+.hobbie-car {
+  background-image: url("../images/hobbie-car-bg.jpg");
+}
+
+.hobbie-AI {
+  background-image: url("../images/hobbie-AI.jpg");
 }
 
 

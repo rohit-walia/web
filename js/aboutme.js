@@ -29,19 +29,25 @@ function updateProgressBar() {
 
   //logic
   if(milestoneDelta[0]>0 && milestoneDelta[0]<80) {
-    updateProgressBarText(progressBarText, "The newspaper boy", scrolled, "cyan");
+    updateProgressBarText(progressBarText, "My first employment", scrolled, "cyan");
   }
   else if (milestoneDelta[1]>0 && milestoneDelta[1]<100) {
-    updateProgressBarText(progressBarText, "My first JAVA program", scrolled, "cyan");
+    updateProgressBarText(progressBarText, "I'm a car enthusiast", scrolled, "cyan");
   }
   else if (milestoneDelta[2]>0 && milestoneDelta[2]<100) {
-    updateProgressBarText(progressBarText, "My Last undergraduate year", scrolled, "cyan");
+    updateProgressBarText(progressBarText, "My first JAVA program", scrolled, "cyan");
   }
   else if (milestoneDelta[3]>0 && milestoneDelta[3]<100) {
+    updateProgressBarText(progressBarText, "I'm pro-AI revolution", scrolled, "cyan");
+  }
+  else if (milestoneDelta[4]>0 && milestoneDelta[4]<100) {
+    updateProgressBarText(progressBarText, "My Last undergraduate year", scrolled, "cyan");
+  }
+  else if (milestoneDelta[5]>0 && milestoneDelta[5]<100) {
     updateProgressBarText(progressBarText, "My first tech job", scrolled, "cyan");
   }
   else {
-    updateProgressBarText(progressBarText, "", null, "transparent");
+    updateProgressBarText(progressBarText, null, null, "transparent");
   }
 
 }
