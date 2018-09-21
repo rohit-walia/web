@@ -54,6 +54,14 @@ html, body {
 }
 */
 
+#roro-car {
+  width: 100%;
+  display: block;
+  border-radius: 50%;
+  border: 1px solid #ddd;
+  padding: 1%;
+}
+
 
 /* header and content of each milestone */
 .milestone th {
