@@ -37,7 +37,7 @@ function updateProgressBar() {
     updateProgressBarText("I'm pro-AI revolution", scrolled, "cyan");
   }
   else if (milestoneDelta[4]>0 && milestoneDelta[4]<100) {
-    updateProgressBarText("My Last undergraduate year", scrolled, "cyan");
+    updateProgressBarText("York Universtiy", scrolled, "cyan");
   }
   else if (milestoneDelta[5]>0 && milestoneDelta[5]<100) {
     updateProgressBarText("My first tech job", scrolled, "cyan");
