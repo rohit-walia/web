@@ -2,55 +2,49 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
+<meta charset="UTF-8">
 
-  <title>
-    About me
-  </title>
+<title>
+  About me
+</title>
 
-  <link rel="stylesheet" type="text/css" href="../css/styles.css">
-  <link rel="stylesheet" type="text/css" href="../css/about.css">
-  <script src="../js/aboutme.js"></script>
+<link rel="stylesheet" type="text/css" href="../css/styles.css">
+<link rel="stylesheet" type="text/css" href="../css/about.css">
+<script src="../js/aboutme.js"></script>
 
 </head>
 
 <body>
 
-  <header>
-    <nav>
-      <ul>
-        <li style="margin-left:10%"><a href='../index.html'>Home</a></li>
-        <li id="activeMenu"><a href='about.html'>About Me</a></li>
-        <li><a href='projects.html'>Projects</a></li>
-        <li><a href='contact.html'>Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+<header>
+  <nav>
+    <ul>
+      <li style="margin-left:10%"><a href='../index.html'>Home</a></li>
+      <li id="activeMenu"><a href='about.html'>About Me</a></li>
+      <li><a href='projects.html'>Projects</a></li>
+      <li><a href='contact.html'>Contact</a></li>
+    </ul>
+  </nav>
+</header>
 
-  <ul id="socialMediaIcons">
-    <li>
-      <a href="https://www.facebook.com/rohit.walia.7">
-        <img src="../images/fbicon.png" alt="fb icon error" style="height:50px">
-      </a>
-    </li>
-    <li>
-      <a href="http://www.linkedin.com/in/waliarohit">
-        <img src="../images/linkedin.png" alt="linkedin icon error" style="height:50px">
-      </a>
-    </li>
-  </ul>
-
-  <!-- progress bar -->
-  <div class="progress-container">
-    <div class="progress-bar" id="pBar">
-      <b><p class="progress-text"></p></b>
-    </div>
-  </div>
+<ul id="socialMediaIcons">
+  <li>
+    <a href="https://www.facebook.com/rohit.walia.7">
+      <img src="../images/fbicon.png" alt="fb icon error" style="height:50px">
+    </a>
+  </li>
+  <li>
+    <a href="http://www.linkedin.com/in/waliarohit">
+      <img src="../images/linkedin.png" alt="linkedin icon error" style="height:50px">
+    </a>
+  </li>
+</ul>
 
 
-  <!-- parallax scrolling -->
-  <div class="job-guardian"></div>
+<!-- parallax scrolling -->
+<div id="job-guardian"></div>
 
+<div class="milestoneContainer" style="background-image: url('../images/theGuardian.jpg')">
   <table class = "milestone">
     <tr>
       <td>
@@ -63,9 +57,13 @@
       </td>
     </tr>
   </table>
+</div>
 
-  <div class="hobbie-car"></div>
+<div id="job-guardian"></div>
 
+<div id="hobbie-car"></div>
+
+<div class="milestoneContainer" style="background-image: url('../images/hobbie-car-bg.jpg')">
   <table class = "milestone">
     <tr>
       <td style="width: 50%;">
@@ -77,9 +75,13 @@
       </td>
     </tr>
   </table>
+</div>
 
-  <div class="job-gateGourmet"></div>
+<div id="hobbie-car"></div>
 
+<div id="job-gateGourmet"></div>
+
+<div class="milestoneContainer" style="background-image: url('../images/airCanada.png')">
   <table class = "milestone">
     <tr>
       <th>THE COST OF ASPIRATION IS SACRIFICE</th>
@@ -91,9 +93,13 @@
       </td>
     </tr>
   </table>
+</div>
 
-  <div class="hobbie-AI"></div>
+<div id="job-gateGourmet"></div>
 
+<div id="hobbie-AI"></div>
+
+<div class="milestoneContainer" style="background-image: url('../images/hobbie-AI.jpg')">
   <table class = "milestone">
     <tr>
       <td>
@@ -110,22 +116,14 @@
         <img src="../images/robot.jpg" style="width: 65%; display: block">
       </td>
     </tr>
-    <tr>
-      <table>
-        <tr>
-          <td style="width: 100%; padding: 0% 1% 2% 8%;">
-            <sub>
-              <i>1. "Should technology replace human labour?" - Debate.org: <a href="http://www.debate.org/opinions/should-technology-replace-human-labor">Link to poll</a><br>
-              2. "47 percent of currently existing jobs in America are at high risk of potential automation in the coming decades." - <a href="https://www.oxfordmartin.ox.ac.uk/downloads/academic/The_Future_of_Employment.pdf">THE FUTURE OF EMPLOYMENT: HOW SUSCEPTIBLE ARE JOBS TO COMPUTERISATION?</a></i>
-            </sub>
-          </td>
-        </tr>
-      </table>
-    </tr>
   </table>
+</div>
 
-  <div class="job-yorkUni"></div>
+<div id="hobbie-AI"></div>
 
+<div id="job-yorkUni"></div>
+
+<div class="milestoneContainer" style="background-image: url('../images/yorkUni.jpg')">
   <table class = "milestone">
     <tr>
       <th>
@@ -150,9 +148,13 @@
       </td>
     </tr>
   </table>
+</div>
 
-  <div class="job-pcc"></div>
+<div id="job-yorkUni"></div>
 
+<div id="job-pcc"></div>
+
+<div class="milestoneContainer" style="background-image: url('../images/pointclickcare.png')">
   <table class = "milestone">
     <tr>
       <th>IM JUST GETTING STARTED</th>
@@ -168,15 +170,27 @@
       </td>
     </tr>
   </table>
+</div>
 
-  <div class="job-pcc" style = "height: 40%"></div>
+<div id="job-pcc" style = "height: 40%"></div>
 
-  <script>
-    window.onscroll = function() {
-      updateProgressBar()
-    };
 
-  </script>
+
+<!-- progress bar -->
+<div class="progress-container">
+  <div class="progress-bar" id="pBar">
+    <b><p class="progress-text"></p></b>
+  </div>
+</div>
+
+
+
+<script>
+  window.onscroll = function() {
+    updateProgressBar()
+  };
+
+</script>
 
 </body>
 </html>

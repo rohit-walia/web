@@ -9,50 +9,50 @@
 
 html, body {
   height: 100%;
+  width:100%;
 }
 
 /* Create the parallax scrolling effect */
-.job-guardian, .job-gateGourmet, .job-yorkUni, .job-pcc, .hobbie-car, .hobbie-AI {
-    height: 77.5%;
-    opacity: 0.8;
+#job-guardian, #job-gateGourmet, #job-yorkUni, #job-pcc, #hobbie-car, #hobbie-AI {
+    height: 45%;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-.job-guardian {
+#job-guardian {
   background-image: url("../images/theGuardian.jpg");
 }
 
-.job-gateGourmet {
+#job-gateGourmet {
   background-image: url("../images/airCanada.png");
 }
 
-.job-yorkUni {
+#job-yorkUni {
   background-image: url("../images/yorkUni.jpg");
 }
 
-.job-pcc {
+#job-pcc {
   background-image: url("../images/pointclickcare.png");
 }
 
-.hobbie-car {
+#hobbie-car {
   background-image: url("../images/hobbie-car-bg.jpg");
 }
 
-.hobbie-AI {
+#hobbie-AI {
   background-image: url("../images/hobbie-AI.jpg");
 }
 
 
-/* Turn off parallax scrolling for tablets and phones. Increase the pixels if needed
+Turn off parallax scrolling for tablets and phones. Increase the pixels if needed
 @media only screen and (max-device-width: 1366px) {
-    .job-guardian, .job-gateGourmet, .job-yorkUni, .job-pcc {
+    #job-guardian, #job-gateGourmet, #job-yorkUni, #job-pcc, #hobbie-car, #hobbie-AI {
         background-attachment: scroll;
     }
 }
-*/
+
 
 #roro-car {
   width: 100%;
@@ -62,8 +62,22 @@ html, body {
   padding: 1%;
 }
 
+.milestoneContainer {
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
 
 /* header and content of each milestone */
+.milestone {
+  width: 80%;
+  margin: 0 auto;
+  border-radius: 15px 50px 30px;
+  background-color: tomato;
+}
+
 .milestone th {
     height: 80px;
 }
