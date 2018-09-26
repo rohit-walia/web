@@ -13,7 +13,7 @@ html, body {
 }
 
 /* Create the parallax scrolling effect */
-#job-guardian, #job-gateGourmet, #job-yorkUni, #job-pcc, #hobbie-car, #hobbie-AI {
+#job-guardian, #job-gateGourmet, #job-yorkUni, #job-pcc, #hobbie-car {
     height: 45%;
     background-attachment: fixed;
     background-position: center;
@@ -22,33 +22,29 @@ html, body {
 }
 
 #job-guardian {
-  background-image: url("../images/theGuardian.jpg");
-}
-
-#job-gateGourmet {
-  background-image: url("../images/airCanada.png");
-}
-
-#job-yorkUni {
-  background-image: url("../images/yorkUni.jpg");
-}
-
-#job-pcc {
-  background-image: url("../images/pointclickcare.png");
+  background-image: url("../resources/images/theGuardian.jpg");
 }
 
 #hobbie-car {
-  background-image: url("../images/hobbie-car-bg.jpg");
+  background-image: url("../resources/images/hobbie-car-bg.jpg");
 }
 
-#hobbie-AI {
-  background-image: url("../images/hobbie-AI.jpg");
+#job-gateGourmet {
+  background-image: url("../resources/images/airCanada.png");
+}
+
+#job-yorkUni {
+  background-image: url("../resources/images/yorkUni.jpg");
+}
+
+#job-pcc {
+  background-image: url("../resources/images/pointclickcare.png");
 }
 
 
 Turn off parallax scrolling for tablets and phones. Increase the pixels if needed
 @media only screen and (max-device-width: 1366px) {
-    #job-guardian, #job-gateGourmet, #job-yorkUni, #job-pcc, #hobbie-car, #hobbie-AI {
+    #job-guardian, #job-gateGourmet, #job-yorkUni, #job-pcc, #hobbie-car {
         background-attachment: scroll;
     }
 }
