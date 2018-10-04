@@ -14,7 +14,7 @@ html, body {
 
 /* Create the parallax scrolling effect */
 #job-guardian, #job-gateGourmet, #job-yorkUni, #job-pcc, #hobbie-car {
-    height: 45%;
+    height: 37%;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -30,7 +30,7 @@ html, body {
 }
 
 #job-gateGourmet {
-  background-image: url("../resources/images/airCanada.png");
+  background-image: url("../resources/images/airCanada.jpg");
 }
 
 #job-yorkUni {
@@ -38,7 +38,7 @@ html, body {
 }
 
 #job-pcc {
-  background-image: url("../resources/images/pointclickcare.png");
+  background-image: url("../resources/images/pointclickcare.jpg");
 }
 
 
