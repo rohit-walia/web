@@ -9,7 +9,7 @@
   </title>
 
 	<link rel="stylesheet" type="text/css" href="../css/styles.css">
-  <!-- <link rel="stylesheet" type="text/css" href="../css/index.css"> -->
+  <link rel="stylesheet" type="text/css" href="../css/contact.css">
 
 </head>
 
@@ -28,16 +28,31 @@
 	<ul id="socialMediaIcons">
 		<li>
 			<a href="https://www.facebook.com/rohit.walia.7">
-				<img src="../images/fbicon.png" alt="fb icon error" style="height:50px">
+				<img src="../resources/images/fbicon.png" alt="fb icon error" style="height:50px">
 			</a>
 		</li>
 		<li>
 			<a href="http://www.linkedin.com/in/waliarohit">
-				<img src="../images/linkedin.png" alt="linkedin icon error" style="height:50px">
+				<img src="../resources/images/linkedin.png" alt="linkedin icon error" style="height:50px">
 			</a>
 		</li>
 	</ul>
 
+  <form action=".jsp" style="width: 50%; margin: 5% auto;" method="POST">
+    <fieldset>
+    <legend>via e-mail</legend>
+      Name:<br>
+      <input name="name" type="text"><br><br>
+
+      Email:<br>
+      <input name="email" type="text"><br><br>
+
+      Message:<br>
+      <textarea name="message" style="width: 99%">The cat was playing in the garden.</textarea><br><br>
+
+      <input type="submit" value="Submit">
+    </fieldset>
+  </form>
 
 
 </body>
