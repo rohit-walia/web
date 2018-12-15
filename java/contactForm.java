@@ -1,26 +1,38 @@
-public class contactForm extends HttpServlet {
+import java.io.*;
+import java.util.*;
+import javax.servlet.*;
+import javax.servlet.http.*;
+import javax.mail.*;
+import javax.mail.internet.*;
+import javax.activation.*;
+
+@WebServlet("../src/contact")
+public class ContactForm extends HttpServlet {
 
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-      // Set response content type
+      //Set response content type
       response.setContentType("text/html");
 
-      PrintWriter out = response.getWriter();
-      String title = "Using GET Method to Read Form Data";
-      String docType =
-         "<!doctype html public \"-//w3c//dtd html 4.0 " + "transitional//en\">\n";
+      //store response variables
+      String docType = "<!DOCTYPE html>\n";
+      String title = "Contact";
 
+      //get form data
+      String name = request.getParameter("name");
+      String email = request.getParameter("email");
+      String message = request.getParameter("message");
+
+      //processing
+
+
+      //client response
+      PrintWriter out = response.getWriter();
       out.println(docType +
          "<html>\n" +
             "<head><title>" + title + "</title></head>\n" +
           "<body>\n" +
-            "<h1 align = \"center\">" + title + "</h1>\n" +
-              "<ul>\n" +
-                "  <li><b>First Name</b>: "
-                + request.getParameter("first_name") + "\n" +
-                "  <li><b>Last Name</b>: "
-                + request.getParameter("last_name") + "\n" +
-              "</ul>\n" +
-            "</body>" +
+            "<h1>EMAIL SENT</h1>\n" +
+          "</body>" +
           "</html>"
         );
       }
