@@ -6,7 +6,7 @@ import javax.mail.*;
 import javax.mail.internet.*;
 import javax.activation.*;
 
-@WebServlet("../src/contact")
+@WebServlet("/ContactForm")
 public class ContactForm extends HttpServlet {
 
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
