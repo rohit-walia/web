@@ -7,13 +7,15 @@
 ~ vertial progress bar = 1 / about.css
 */
 
-html, body {
+html, body
+{
   height: 100%;
   width:100%;
 }
 
 /* Create the parallax scrolling effect */
-#job-guardian, #job-gateGourmet, #job-yorkUni, #job-pcc, #hobbie-car {
+#job-guardian, #job-gateGourmet, #job-yorkUni, #job-pcc, #hobbie-car
+{
     height: 37%;
     background-attachment: fixed;
     background-position: center;
@@ -21,23 +23,28 @@ html, body {
     background-size: cover;
 }
 
-#job-guardian {
+#job-guardian
+{
   background-image: url("../resources/images/theGuardian.jpg");
 }
 
-#hobbie-car {
+#hobbie-car
+{
   background-image: url("../resources/images/hobbie-car-bg.jpg");
 }
 
-#job-gateGourmet {
+#job-gateGourmet
+{
   background-image: url("../resources/images/airCanada.jpg");
 }
 
-#job-yorkUni {
+#job-yorkUni
+{
   background-image: url("../resources/images/yorkUni.jpg");
 }
 
-#job-pcc {
+#job-pcc
+{
   background-image: url("../resources/images/pointclickcare.jpg");
 }
 
