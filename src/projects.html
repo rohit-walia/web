@@ -10,10 +10,12 @@
 
 	<link rel="stylesheet" type="text/css" href="../css/styles.css">
   <link rel="stylesheet" type="text/css" href="../css/projects.css">
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
   <script src="../js/projects.js"></script>
 </head>
 
 <body>
+
 	<header>
 		<nav>
     		<ul>
@@ -28,12 +30,12 @@
 	<ul id="socialMediaIcons">
 		<li>
 			<a href="https://www.facebook.com/rohit.walia.7">
-				<img src="../resources/images/fbicon.png" alt="fb icon error" style="height:50px">
+				<img src="../resources/images/fbicon.png" alt="fb icon error" style="height:3em">
 			</a>
 		</li>
 		<li>
 			<a href="http://www.linkedin.com/in/waliarohit">
-				<img src="../resources/images/linkedin.png" alt="linkedin icon error" style="height:50px">
+				<img src="../resources/images/linkedin.png" alt="linkedin icon error" style="height:3em">
 			</a>
 		</li>
 	</ul>
@@ -42,7 +44,7 @@
 
   <div id="projectListContainer">
     <ul id="projectList">
-      <li><button onclick="project1()">Star Pyrimad</button></li>
+      <li><button onclick="showPyramid()">Dynamic Pyramid Structure</button></li>
       <li><button>Dice Game</button></li>
       <li><button>Composite Element Automation Framework</button></li>
     </ul>
@@ -50,16 +52,43 @@
 
   <div id="projectContentContainer">
     <div id="projectContent">
-      <h1>Draw a pyramid diagram</h1>
-      <h3>Rules: </br> 1) Draw the structure using only three characters, namely: star '*'', forward-slash '/', and backward-slash '\')</br>
-      2) The diagram should be perfectly symetrical; meaning the number of stars and slashes on the left side should match the number of stars and slashes on the right.
-      3) The first row should only consist of slashes and the last show should only consist of stars. Any rows in-between should have a combination of all three characters.</br>
-      4) Design the structure to be dynamic in size. The height of the pyramid should be equal to a given integer input and not pre-determined.</br>
-      5) If you google this OOP question, you will conclude the easy solution would be to use nested for loops. Hence, nested for loops are not allowed.</br></h3>
+      <h1>Draw a pyramid</h1>
 
-      <h3>Sample console output:</h3>
-      <img src="../resources/images/starFigure.jpg" alt="star-figure-output">
+      <br>
+      <h3>Rules:</h3>
 
+      <p>
+        <img src="../resources/images/checkmark-circle-light-blue.svg" alt="checkmark" style="height: 3vw">
+        Use only three characters: star *, forward-slash /, and backward-slash \
+      </p>
+      <p>
+        <img src="../resources/images/checkmark-circle-light-blue.svg" alt="checkmark" style="height: 3vw">
+        Should be perfectly symetrical
+      </p>
+      <p>
+        <img src="../resources/images/checkmark-circle-light-blue.svg" alt="checkmark" style="height: 3vw">
+        The tip of the pyramid should only consist of slashes and the base should only consist of stars. Everything in-between should have a combination of all three characters
+      </p>
+      <p>
+        <img src="../resources/images/checkmark-circle-light-blue.svg" alt="checkmark" style="height: 3vw">
+        Design the structure to be dynamic in size
+      </p>
+      <p>
+        <img src="../resources/images/checkmark-circle-light-blue.svg" alt="checkmark" style="height: 3vw">
+        You can't use nested for-loops
+      </p>
+
+      <br>
+      <h3>Sample console output: <span><i>(if height = 12)</i></span>
+        <img src="../resources/images/starFigure.png" alt="star-figure-output" style="vertical-align:middle">
+      </h3>
+
+      Height:<br>
+      <input type="text" name="height" id="height">
+      <button onclick="CalculatePyramid(document.getElementById('height').value)">Try it</button>
+
+
+      <table id="displayPyramid"></table>
 
     </div>
   </div>
@@ -67,6 +96,6 @@
 </div>
 
 
-
+<script src="../js/drawStarDiagram.js"></script>
 </body>
 </html>

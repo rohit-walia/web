@@ -1,8 +1,12 @@
-function project1() {
+
+function showPyramid() {
   var x = document.getElementById("projectContent");
-  if (x.style.display === "none") {
+
+  if (x.style.display === "none")
+  {
     x.style.display = "block";
-  } else {
+  } else
+  {
     x.style.display = "none";
   }
 }
