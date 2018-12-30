@@ -45,7 +45,7 @@
   <div id="projectListContainer">
     <ul id="projectList">
       <li><button onclick="showPyramid()">Dynamic Pyramid Structure</button></li>
-      <li><button>Dice Game</button></li>
+      <li><button>2 Player Dice Game</button></li>
       <li><button>Composite Element Automation Framework</button></li>
     </ul>
   </div>
@@ -53,7 +53,6 @@
   <div id="projectContentContainer">
     <div id="projectContent">
       <h1>Draw a pyramid</h1>
-
       <br>
       <h3>Rules:</h3>
 
@@ -79,14 +78,113 @@
       </p>
 
       <br>
-      <h3>Sample console output: <span><i>(if height = 12)</i></span>
-        <img src="../resources/images/starFigure.png" alt="star-figure-output" style="vertical-align:middle">
+
       </h3>
 
-      Height:<br>
-      <input type="text" name="height" id="height">
-      <button onclick="CalculatePyramid(document.getElementById('height').value)">Try it</button>
+      <table>
+        <tr>
+          <td>
+            <h3>Sample console output:</h3>
+          </td>
+        </tr>
+        <tr>
+          <td>
+          </td>
+          <td>
+            <p><i>(if height = 12)</i></p>
+          </td>
+          <td>
+            <img src="../resources/images/starFigure.PNG" alt="star-figure-output">
+          </td>
+        </tr>
+      </table>
 
+      <table>
+        <tr>
+          <td style="vertical-align: top;">
+            <h3>Solution via Java</h3>
+          </td>
+        </tr>
+        <tr>
+          <td>
+          </td>
+          <td>
+            <pre>
+              public class Pyramid {
+
+                private static final char SLASH = '/';
+                private static final char BACKSLASH ='\\';
+                private static final char STAR = '*';
+                private static int counter = 0;
+                private static int width;
+                private static final PrintStream write = System.out;
+
+                public static void main(String[] args)
+                {
+                  printPyramid(12);
+                }
+
+                public static void printPyramid(int height)
+                {
+                  counter++;
+                  int numberOfStarsToPrint = height*2-2;
+
+                  //base case
+                  if(height==1)
+                  {
+                    width = counter*2-2;
+                    for (int i=0; i &lt; width; i++)
+                    {
+                      if(i == Math.decrementExact(width/2))
+                      {
+                        write.print(SLASH);
+                      }
+                      else if(i == width/2)
+                      {
+                        write.print(BACKSLASH);
+                      }
+                      else
+                        write.print(" ");
+                    }
+                    write.print(System.lineSeparator());
+                    return;
+                  }
+
+                  //recursive method
+                  printStarFigure(Math.decrementExact(height));
+
+                  int leftSide = Math.subtractExact(width/2, numberOfStarsToPrint/2);
+                  int rightSide = Math.addExact(width/2, numberOfStarsToPrint/2);
+
+                  for (int i=0; i &lt; width; i++)
+                  {
+                    if(i < leftSide)
+                    {
+                      write.print(i == Math.decrementExact(leftSide) ? SLASH : " ");
+                    }
+                    else if(i >= rightSide)
+                    {
+                      write.print(i == rightSide ? BACKSLASH : " ");
+                    }
+                    else
+                      write.print(STAR);
+                  }
+                  write.print(System.lineSeparator());
+                  return;
+                }
+              }
+            </pre>
+          </td>
+        </tr>
+      </table>
+
+
+      <h3>Demo via JavaScript</h3>
+      <p>
+        Enter the desired pyramid height:
+        <input type="text" name="height" id="height">
+        <button onclick="CalculatePyramid(document.getElementById('height').value)">Draw Pyramid</button>
+      </p>
 
       <table id="displayPyramid"></table>
 

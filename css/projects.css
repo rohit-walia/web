@@ -7,6 +7,12 @@
 ~ vertial progress bar = 1 / about.css
 */
 
+html, body
+{
+    margin: 0;
+    padding: 0;
+}
+
 #topContainer
 {
   width: 100%
@@ -34,7 +40,7 @@
   border: none;
   color: dodgerblue;
   width: 100%;
-  text-align: center;
+  text-align: left;
   font-size: 1vw;
   padding: 5% 0;
 }
@@ -52,4 +58,9 @@
 
 #projectContent
 {
+}
+
+#displayPyramid
+{
+  margin: 0px auto;
 }

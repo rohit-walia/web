@@ -27,7 +27,7 @@ body h3
     font-size:2vw;
 }
 
-body header, p, span, td, th
+body header, p, span
 {
     font-size: 1.5vw;
     font-family: "Raleway", "calibri light", "Arial";
