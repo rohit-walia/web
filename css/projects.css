@@ -7,12 +7,6 @@
 ~ vertial progress bar = 1 / about.css
 */
 
-html, body
-{
-    margin: 0;
-    padding: 0;
-}
-
 #topContainer
 {
   width: 100%
@@ -38,7 +32,7 @@ html, body
 {
   background-color: inherit;
   border: none;
-  color: dodgerblue;
+  color: #399cbf;
   width: 100%;
   text-align: left;
   font-size: 1vw;

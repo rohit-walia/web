@@ -7,12 +7,6 @@
 ~ vertial progress bar = 1 / about.css
 */
 
-html, body
-{
-  height: 100%;
-  width:100%;
-}
-
 
 /* Create the parallax scrolling effect */
 #job-guardian, #job-gateGourmet, #job-yorkUni, #job-pcc, #hobbie-car
@@ -80,14 +74,17 @@ Turn off parallax scrolling for tablets and phones. Increase the pixels if neede
   margin: 0 auto;
   border-radius: 15px 50px 30px;
   background-color: tomato;
+  font-family: "Raleway", "calibri light", "Arial";
 }
 
 .milestone th {
-    height: 80px;
+  height: 80px;
+  font-size:2vw;
 }
 
 .milestone td {
     padding: 0% 1% 2% 8%;
+    font-size: 1.5vw;
 }
 
 

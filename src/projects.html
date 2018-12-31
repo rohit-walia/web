@@ -52,34 +52,41 @@
 
   <div id="projectContentContainer">
     <div id="projectContent">
+
       <h1>Draw a pyramid</h1>
-      <br>
-      <h3>Rules:</h3>
 
-      <p>
-        <img src="../resources/images/checkmark-circle-light-blue.svg" alt="checkmark" style="height: 3vw">
-        Use only three characters: star *, forward-slash /, and backward-slash \
-      </p>
-      <p>
-        <img src="../resources/images/checkmark-circle-light-blue.svg" alt="checkmark" style="height: 3vw">
-        Should be perfectly symetrical
-      </p>
-      <p>
-        <img src="../resources/images/checkmark-circle-light-blue.svg" alt="checkmark" style="height: 3vw">
-        The tip of the pyramid should only consist of slashes and the base should only consist of stars. Everything in-between should have a combination of all three characters
-      </p>
-      <p>
-        <img src="../resources/images/checkmark-circle-light-blue.svg" alt="checkmark" style="height: 3vw">
-        Design the structure to be dynamic in size
-      </p>
-      <p>
-        <img src="../resources/images/checkmark-circle-light-blue.svg" alt="checkmark" style="height: 3vw">
-        You can't use nested for-loops
-      </p>
+      <table>
+        <tr>
+          <td><h3>Rules:</h3></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>
+            <p>
+              <img src="../resources/images/checkmark-circle-light-blue.svg" alt="checkmark" style="height: 3vw">
+              Use only three characters: star *, forward-slash /, and backward-slash \
+            </p>
+            <p>
+              <img src="../resources/images/checkmark-circle-light-blue.svg" alt="checkmark" style="height: 3vw">
+              Should be perfectly symetrical
+            </p>
+            <p>
+              <img src="../resources/images/checkmark-circle-light-blue.svg" alt="checkmark" style="height: 3vw">
+              The tip of the pyramid should only consist of slashes and the base should only consist of stars. Everything in-between should have a combination of all three characters
+            </p>
+            <p>
+              <img src="../resources/images/checkmark-circle-light-blue.svg" alt="checkmark" style="height: 3vw">
+              Design the structure to be dynamic in size
+            </p>
+            <p>
+              <img src="../resources/images/checkmark-circle-light-blue.svg" alt="checkmark" style="height: 3vw">
+              You can't use nested for-loops
+            </p>
+          </td>
+        </tr>
+      </table>
 
-      <br>
-
-      </h3>
+      <br><br>
 
       <table>
         <tr>
@@ -99,6 +106,8 @@
         </tr>
       </table>
 
+      <br><br>
+
       <table>
         <tr>
           <td style="vertical-align: top;">
@@ -106,9 +115,7 @@
           </td>
         </tr>
         <tr>
-          <td>
-          </td>
-          <td>
+          <td style="vertical-align: top;">
             <pre>
               public class Pyramid {
 
@@ -175,19 +182,43 @@
               }
             </pre>
           </td>
+          <td style = "vertical-align: top;">
+            <pre>
+
+
+              // I first started by establishing
+              // the variables.
+
+
+
+
+
+              // main method for console output
+            </pre>
+          </td>
         </tr>
       </table>
 
+      <br><br>
 
-      <h3>Demo via JavaScript</h3>
-      <p>
-        Enter the desired pyramid height:
-        <input type="text" name="height" id="height">
-        <button onclick="CalculatePyramid(document.getElementById('height').value)">Draw Pyramid</button>
-      </p>
+      <table>
+        <tr>
+          <td><h3>Demo via JavaScript</h3></td>
+        </tr>
+        <tr>
+          <td>
+            <p>
+              Enter the desired pyramid height:
+              <input type="text" name="height" id="height">
+              <button onclick="CalculatePyramid(document.getElementById('height').value)">Draw Pyramid</button>
+            </p>
+          </td>
+        </tr>
+      </table>
 
       <table id="displayPyramid"></table>
 
+      <div style="height: 5vw; clear:both;"></div>
     </div>
   </div>
 
