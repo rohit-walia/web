@@ -51,6 +51,14 @@ Turn off parallax scrolling for tablets and phones. Increase the pixels if neede
     }
 }
 
+#first_job
+{
+  width: 70%;
+  display: block;
+  position: relative;
+  bottom: 4vw;
+  left: 4vw;
+}
 
 #roro-car {
   width: 100%;
@@ -73,7 +81,7 @@ Turn off parallax scrolling for tablets and phones. Increase the pixels if neede
   width: 80%;
   margin: 0 auto;
   border-radius: 15px 50px 30px;
-  background-color: tomato;
+  background-color: #47baeb;
   font-family: "Raleway", "calibri light", "Arial";
 }
 

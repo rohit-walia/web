@@ -7,6 +7,11 @@
 ~ vertial progress bar = 1 / about.css
 */
 
+html, body
+{
+  height: 100%;
+}
+
 #topContainer
 {
   width: 100%
@@ -52,9 +57,25 @@
 
 #projectContent
 {
+
 }
 
 #displayPyramid
 {
   margin: 0px auto;
+}
+
+#titleBg
+{
+  background-image: url("../resources/images/pyramid_mexico.jpg");
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+  padding: 4vw;
+  width: 100%;
+}
+
+#titleContent
+{
+  color: white;
 }

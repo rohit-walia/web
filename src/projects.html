@@ -53,7 +53,9 @@
   <div id="projectContentContainer">
     <div id="projectContent">
 
-      <h1>Draw a pyramid</h1>
+      <div id="titleBg">
+        <h1 id="titleContent">Dynamic Pyramid</h1>
+      </div>
 
       <table>
         <tr>
@@ -131,13 +133,17 @@
                   printPyramid(12);
                 }
 
+                /*
+                 * Prints a pyramid structure given the height.
+                 *
+                 * @params height the height of the pyramid
+                 */
                 public static void printPyramid(int height)
                 {
                   counter++;
                   int numberOfStarsToPrint = height*2-2;
 
-                  //base case
-                  if(height==1)
+                  if(height==1)                                                         // base case
                   {
                     width = counter*2-2;
                     for (int i=0; i &lt; width; i++)
@@ -157,8 +163,7 @@
                     return;
                   }
 
-                  //recursive method
-                  printStarFigure(Math.decrementExact(height));
+                  printStarFigure(Math.decrementExact(height));                         // recursive step
 
                   int leftSide = Math.subtractExact(width/2, numberOfStarsToPrint/2);
                   int rightSide = Math.addExact(width/2, numberOfStarsToPrint/2);
@@ -180,20 +185,6 @@
                   return;
                 }
               }
-            </pre>
-          </td>
-          <td style = "vertical-align: top;">
-            <pre>
-
-
-              // I first started by establishing
-              // the variables.
-
-
-
-
-
-              // main method for console output
             </pre>
           </td>
         </tr>
