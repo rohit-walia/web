@@ -9,7 +9,7 @@
 
 
 /* Create the parallax scrolling effect */
-#job-guardian, #job-gateGourmet, #job-yorkUni, #job-pcc, #hobbie-car
+#bg-pic
 {
     height: 37%;
     background-attachment: fixed;
@@ -18,46 +18,17 @@
     background-size: cover;
 }
 
-#job-guardian
+#bg-pic
 {
-  background-image: url("../resources/images/theGuardian.jpg");
-}
-
-#hobbie-car
-{
-  background-image: url("../resources/images/hobbie-car-bg.jpg");
-}
-
-#job-gateGourmet
-{
-  background-image: url("../resources/images/airCanada.jpg");
-}
-
-#job-yorkUni
-{
-  background-image: url("../resources/images/yorkUni.jpg");
-}
-
-#job-pcc
-{
-  background-image: url("../resources/images/pointclickcare.jpg");
+  background-image: url("../resources/images/aboutme_pic1.jpg");
 }
 
 
 Turn off parallax scrolling for tablets and phones. Increase the pixels if needed
 @media only screen and (max-device-width: 1366px) {
-    #job-guardian, #job-gateGourmet, #job-yorkUni, #job-pcc, #hobbie-car {
+    #job-pcc {
         background-attachment: scroll;
     }
-}
-
-#first_job
-{
-  width: 70%;
-  display: block;
-  position: relative;
-  bottom: 4vw;
-  left: 4vw;
 }
 
 #roro-car {
@@ -68,40 +39,36 @@ Turn off parallax scrolling for tablets and phones. Increase the pixels if neede
   padding: 1%;
 }
 
-.milestoneContainer {
+ .milestoneContainer
+ {
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
 
-
-/* header and content of each milestone */
-.milestone {
+.milestone
+{
   width: 80%;
   margin: 0 auto;
   border-radius: 15px 50px 30px;
-  background-color: #47baeb;
-  font-family: "Raleway", "calibri light", "Arial";
 }
 
-.milestone th {
-  height: 80px;
-  font-size:2vw;
-}
-
-.milestone td {
+.milestone td
+{
     padding: 0% 1% 2% 8%;
     font-size: 1.5vw;
 }
 
 
-/* vertical progress bar */
+/*
+ * Below are stylings for the vertical progress bar
+ */
+
 .progress-container {
   position: fixed;
   top: 0;
-  left: 3px;
-  width: 10px;
+  width: 1vw;
   height: 100%;
   background: transparent;
   z-index: 1;
@@ -112,11 +79,18 @@ Turn off parallax scrolling for tablets and phones. Increase the pixels if neede
   width: 100%;
 }
 
+.progress-content-container
+{
+  position: relative;
+  left: 1vw;
+  width: 15vw;
+}
+
 .progress-text {
-  position: absolute;
-  top: 0%;
-  width: max-content;
-  left:100%;
-  background-color: transparent;
   padding: 10px 25px 10px 25px;
+  width: max-content;
+}
+
+.progress-img {
+  max-width: 100%
 }

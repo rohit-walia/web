@@ -7,6 +7,10 @@ var allStones = document.getElementsByClassName("milestone");
 //empty array to hold delta between milestone and window screen
 var milestoneDelta = [];
 
+//progress bar text
+var firstJob = "1st Employer: The Guardian";
+var howThingsWork = "I have a very logical<br>mindset";
+
 
 function updateProgressBar() {
   //get total scrollale area
@@ -19,25 +23,17 @@ function updateProgressBar() {
   document.getElementById("pBar").style.height = scrolled + "%";
 
   //populate delta between milestone and window screen
-  for(var i=0; i<allStones.length; i++) {
+  for(var i=0; i<allStones.length; i++)
+  {
     milestoneDelta[i] = (allStones[i].getBoundingClientRect().top/winH)*100;
   }
 
   //logic
-  if(milestoneDelta[0]>0 && milestoneDelta[0]<80) {
-    updateProgressBarText("My first employment", scrolled, "cyan");
+  if(milestoneDelta[0]>0 && milestoneDelta[0]<100) {
+    updateProgressBarText(firstJob, scrolled, "cyan");
   }
   else if (milestoneDelta[1]>0 && milestoneDelta[1]<100) {
-    updateProgressBarText("I'm a car enthusiast", scrolled, "cyan");
-  }
-  else if (milestoneDelta[2]>0 && milestoneDelta[2]<100) {
-    updateProgressBarText("My first JAVA program", scrolled, "cyan");
-  }
-  else if (milestoneDelta[3]>0 && milestoneDelta[3]<100) {
-    updateProgressBarText("York Universtiy", scrolled, "cyan");
-  }
-  else if (milestoneDelta[4]>0 && milestoneDelta[4]<100) {
-    updateProgressBarText("My first tech job", scrolled, "cyan");
+    updateProgressBarText(howThingsWork, scrolled, "cyan");
   }
   else {
     updateProgressBarText(null, null, "transparent");
@@ -46,8 +42,21 @@ function updateProgressBar() {
 
 
 function updateProgressBarText(text, scroll, bgColor) {
-  var element = document.getElementsByClassName("progress-text")[0];;
-  element.innerHTML = text;
-  element.style.top = scroll + "%";
-  element.style.backgroundColor = bgColor;
+  var textElement = document.getElementsByClassName("progress-text")[0];
+  var imgElement = document.getElementsByClassName("progress-img")[0];
+
+  textElement.innerHTML = text;
+  textElement.style.top = scroll + "%";
+  textElement.style.backgroundColor = bgColor;
+
+  if(text===firstJob)
+  {
+    imgElement.src = "../resources/images/first_job.png";
+  }
+  else
+  {
+    imgElement.src = "";
+  }
+
+
 }
