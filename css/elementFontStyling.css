@@ -1,0 +1,55 @@
+
+/*
+ * Font styling for h1, h2, h3 elements
+ */
+
+h1, h2, h3
+{
+    font-family: "Raleway", "Trebuchet MS", "Arial";
+}
+
+h1
+{
+    font-size:4vw;
+    color: #399cbf;
+    text-align: center;
+}
+
+h2
+{
+    font-size:3vw;
+    color: #47baeb;
+}
+
+h3
+{
+    font-size:2vw;
+}
+
+/*
+ * Font styling for menu header, p, and span elements
+ */
+
+header, p, span
+{
+    font-family: "Raleway", "calibri light", "Arial";
+}
+
+header
+{
+    font-size: 1.7vw;
+}
+
+p, span
+{
+    font-size: 1.5vw;
+}
+
+
+/*
+ * Font styling tables
+ */
+ table.milestone td
+ {
+    font-family: "Raleway", "calibri light", "Arial";
+ }

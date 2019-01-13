@@ -8,11 +8,11 @@ var allStones = document.getElementsByClassName("milestone");
 var milestoneDelta = [];
 
 //progress bar text
-var firstJob = "1st Employer: The Guardian";
-var howThingsWork = "I have a very logical<br>mindset";
+var firstJob = "1st Employer: The Guardian News";
+var longestJob = "Longest employment: 9 years";
 
-
-function updateProgressBar() {
+function updateProgressBar()
+{
   //get total scrollale area
   var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
 
@@ -29,19 +29,23 @@ function updateProgressBar() {
   }
 
   //logic
-  if(milestoneDelta[0]>0 && milestoneDelta[0]<100) {
+  if(milestoneDelta[0]>0 && milestoneDelta[0]<100)
+  {
     updateProgressBarText(firstJob, scrolled, "cyan");
   }
-  else if (milestoneDelta[1]>0 && milestoneDelta[1]<100) {
-    updateProgressBarText(howThingsWork, scrolled, "cyan");
+  else if (milestoneDelta[1]>0 && milestoneDelta[1]<100)
+  {
+    updateProgressBarText(longestJob, scrolled, "cyan");
   }
-  else {
+  else
+  {
     updateProgressBarText(null, null, "transparent");
   }
 }
 
 
-function updateProgressBarText(text, scroll, bgColor) {
+function updateProgressBarText(text, scroll, bgColor)
+{
   var textElement = document.getElementsByClassName("progress-text")[0];
   var imgElement = document.getElementsByClassName("progress-img")[0];
 

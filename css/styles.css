@@ -5,35 +5,6 @@ html, body
     height: 100%;
 }
 
-body h1, h2, h3
-{
-    font-family: "Raleway", "Trebuchet MS", "Arial";
-}
-
-body h1
-{
-    font-size:4vw;
-    color: #399cbf;
-    text-align: center;
-}
-
-body h2
-{
-    font-size:3vw;
-    color: #47baeb;
-}
-
-body h3
-{
-    font-size:2vw;
-}
-
-body header, p, span
-{
-    font-size: 1.5vw;
-    font-family: "Raleway", "calibri light", "Arial";
-}
-
 /*-------------------------------------NAVAGATION*/
 
 header
