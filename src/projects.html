@@ -2,13 +2,23 @@
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8">
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-132753825-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-132753825-1');
+  </script>
+
+  <meta charset="UTF-8">
 
   <title>
     Projects
   </title>
 
-	<link rel="stylesheet" type="text/css" href="../css/styles.css">
+  <link rel="stylesheet" type="text/css" href="../css/styles.css">
   <link rel="stylesheet" type="text/css" href="../css/projects.css">
   <link rel="stylesheet" type="text/css" href="../css/elementFontStyling.css">
 
@@ -19,28 +29,28 @@
 
 	<header>
 		<nav>
-    		<ul>
-  				<li style="margin-left:10%"><a href='../index.html'>Home</a></li>
-  				<li><a href='about.html'>About Me</a></li>
-  				<li id="activeMenu"><a href='projects.html'>Projects</a></li>
-          <li><a href='education.html'>Education</a></li>
-  				<li><a href='contact.html'>Contact</a></li>
-			</ul>
-		</nav>
-	</header>
+      <ul>
+        <li style="margin-left:10%"><a href='../index.html'>Home</a></li>
+        <li><a href='about.html'>About Me</a></li>
+        <li id="activeMenu"><a href='projects.html'>Projects</a></li>
+        <li><a href='education.html'>Education</a></li>
+        <li><a href='contact.html'>Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-	<ul id="socialMediaIcons">
-		<li>
-			<a href="https://www.facebook.com/rohit.walia.7">
-				<img src="../resources/images/fbicon.png" alt="fb icon error" style="height:3em">
-			</a>
-		</li>
-		<li>
-			<a href="http://www.linkedin.com/in/waliarohit">
-				<img src="../resources/images/linkedin.png" alt="linkedin icon error" style="height:3em">
-			</a>
-		</li>
-	</ul>
+  <ul id="socialMediaIcons">
+    <li>
+     <a href="https://www.facebook.com/rohit.walia.7">
+      <img src="../resources/images/fbicon.png" alt="fb icon error" style="height:3em">
+    </a>
+  </li>
+  <li>
+   <a href="http://www.linkedin.com/in/waliarohit">
+    <img src="../resources/images/linkedin.png" alt="linkedin icon error" style="height:3em">
+  </a>
+</li>
+</ul>
 
 <div id="topContainer">
 
@@ -123,97 +133,97 @@
             <pre>
               public class Pyramid {
 
-                private static final char SLASH = '/';
-                private static final char BACKSLASH ='\\';
-                private static final char STAR = '*';
-                private static int counter = 0;
-                private static int width;
-                private static final PrintStream write = System.out;
+              private static final char SLASH = '/';
+              private static final char BACKSLASH ='\\';
+              private static final char STAR = '*';
+              private static int counter = 0;
+              private static int width;
+              private static final PrintStream write = System.out;
 
-                public static void main(String[] args)
+              public static void main(String[] args)
+              {
+                printPyramid(12);
+              }
+
+              /*
+              * Prints a pyramid structure given the height.
+              *
+              * @params height the height of the pyramid
+              */
+              public static void printPyramid(int height)
+              {
+                counter++;
+                int numberOfStarsToPrint = height*2-2;
+
+                if(height==1)                                                         // base case
                 {
-                  printPyramid(12);
-                }
-
-                /*
-                 * Prints a pyramid structure given the height.
-                 *
-                 * @params height the height of the pyramid
-                 */
-                public static void printPyramid(int height)
-                {
-                  counter++;
-                  int numberOfStarsToPrint = height*2-2;
-
-                  if(height==1)                                                         // base case
-                  {
-                    width = counter*2-2;
-                    for (int i=0; i &lt; width; i++)
-                    {
-                      if(i == Math.decrementExact(width/2))
-                      {
-                        write.print(SLASH);
-                      }
-                      else if(i == width/2)
-                      {
-                        write.print(BACKSLASH);
-                      }
-                      else
-                        write.print(" ");
-                    }
-                    write.print(System.lineSeparator());
-                    return;
-                  }
-
-                  printStarFigure(Math.decrementExact(height));                         // recursive step
-
-                  int leftSide = Math.subtractExact(width/2, numberOfStarsToPrint/2);
-                  int rightSide = Math.addExact(width/2, numberOfStarsToPrint/2);
-
+                  width = counter*2-2;
                   for (int i=0; i &lt; width; i++)
                   {
-                    if(i < leftSide)
+                    if(i == Math.decrementExact(width/2))
                     {
-                      write.print(i == Math.decrementExact(leftSide) ? SLASH : " ");
+                      write.print(SLASH);
                     }
-                    else if(i >= rightSide)
+                    else if(i == width/2)
                     {
-                      write.print(i == rightSide ? BACKSLASH : " ");
+                      write.print(BACKSLASH);
                     }
                     else
-                      write.print(STAR);
+                    write.print(" ");
                   }
                   write.print(System.lineSeparator());
                   return;
                 }
+
+                printStarFigure(Math.decrementExact(height));                         // recursive step
+
+                int leftSide = Math.subtractExact(width/2, numberOfStarsToPrint/2);
+                int rightSide = Math.addExact(width/2, numberOfStarsToPrint/2);
+
+                for (int i=0; i &lt; width; i++)
+                {
+                  if(i < leftSide)
+                  {
+                    write.print(i == Math.decrementExact(leftSide) ? SLASH : " ");
+                  }
+                  else if(i >= rightSide)
+                  {
+                    write.print(i == rightSide ? BACKSLASH : " ");
+                  }
+                  else
+                  write.print(STAR);
+                }
+                write.print(System.lineSeparator());
+                return;
               }
-            </pre>
-          </td>
-        </tr>
-      </table>
+            }
+          </pre>
+        </td>
+      </tr>
+    </table>
 
-      <br><br>
+    <br><br>
 
-      <table>
-        <tr>
-          <td><h3>Demo via JavaScript</h3></td>
-        </tr>
-        <tr>
-          <td>
-            <p>
-              Enter the desired pyramid height:
-              <input type="text" name="height" id="height">
-              <button onclick="CalculatePyramid(document.getElementById('height').value)">Draw Pyramid</button>
-            </p>
-          </td>
-        </tr>
-      </table>
+    <table>
+      <tr>
+        <td><h3>Demo via JavaScript</h3></td>
+      </tr>
+      <tr>
+        <td>
+          <p>
+            Enter the desired pyramid height:
+            <input type="text" name="height" id="height">
+            <button onclick="CalculatePyramid(document.getElementById('height').value)">Draw Pyramid</button>
+          </p>
+        </td>
+      </tr>
+    </table>
 
-      <table id="displayPyramid"></table>
+    <table id="displayPyramid"></table>
 
-      <div style="height: 5vw; clear:both;"></div>
-    </div>
+    <div style="height: 5vw; clear:both;"></div>
   </div>
+</div>
 
 </div>
 
