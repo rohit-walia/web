@@ -10,6 +10,12 @@ var width = null;
 
 function CalculatePyramid(height) {
 
+  if(!/^\d+$/.test(height))
+  {
+    alert("Did you just attempt to break a software tester's code?");
+    return;
+  }
+
   while ( table.rows.length > 0 )
   {
     counter = 0;
@@ -21,7 +27,7 @@ function CalculatePyramid(height) {
   var numberOfStarsToPrint = (height*2) - 2;
 
   //base case
-  if(height==1)
+  if(height===1)
   {
      width = counter*2-2;
 
@@ -31,11 +37,11 @@ function CalculatePyramid(height) {
      {
        var cell = row.insertCell(i);
 
-       if(i == width/2-1)
+       if(i === width/2-1)
        {
          cell.innerHTML = slash;
        }
-       else if(i == width/2)
+       else if(i === width/2)
        {
          cell.innerHTML = backslash;
        }
@@ -60,7 +66,7 @@ function CalculatePyramid(height) {
 
       if(i < leftSide)
       {
-        if(i == leftSide-1)
+        if(i === leftSide-1)
         {
           cell.innerHTML = slash;
         }
@@ -71,7 +77,7 @@ function CalculatePyramid(height) {
       }
       else if(i >= rightSide)
       {
-        if(i == rightSide)
+        if(i === rightSide)
         {
           cell.innerHTML = backslash;
         }
