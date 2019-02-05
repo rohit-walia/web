@@ -13,6 +13,8 @@
   </script>
 
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 
   <title>
     Education
@@ -61,11 +63,14 @@
     <table class = "milestone" style="background-color: #3D9970;">
       <tr style="color: white;">
         <td colspan="2" style="padding-top: 2vw">
-          As a graduate of the Information Technology (ITEC) program from York University, I am uniquely positioned to plan, design, build and administer information systems. My ITEC program focused on applications of software and information technologies and how they can be systematically designed and developed to meet critical business and organizational problems. Here are some of the courses I completed:
+          As a graduate of the Information Technology (ITEC) program from York University, I am uniquely positioned to plan, design, build and administer information systems. My ITEC program focused on applications of software and information technologies and how they can be systematically designed and developed to meet critical business and organizational problems.
         </td>
       </tr>
       <tr style="color: white">
         <td style="width: 50%">
+          <div id="animate-container">
+            <p id="animate-content" style="opacity: 0">COURSES:</p>
+          </div>
           <ul>
             <li>Applied Statistics</li>
             <li>Big Data Analytics</li>
@@ -81,7 +86,7 @@
             <li>Management of the World Wide Web</li>
             <li>Object-Oriented Programming</li>
             <li>Systems Analysis and Design</li>
-            <li>Using and Designing Database Systems</li>
+            <li>Designing Database Systems</li>
           </ul>
         </td>
       </tr>
@@ -99,13 +104,7 @@
       </tr>
       <tr>
         <td>
-          During my senior year, I was hired by the University. I was part of a website harmonization team focused in content management for the institution web presence: <i>yorku.ca.</i> During my employment I completed two main projects:<br>
-          <ol>
-            <li>Create the Information Architecture (IA) allowing staff to efficiently query specific webpage content across many different web pages.</li><br>
-            <li>Conduct statistical analysis on website requisition data to gain more insight about content change over time.<br>
-              <i style = "font-size: 1.2vw">&emsp;&emsp;This particular project was exciting because it was the first time I used Java to conduct statistical analysis of data.</i>
-            </li>
-          </ol>
+          During my senior year, I was hired by the University for the <i>"Digital Communications Assistant"</i> position. Specifically, I was part of a website harmonization team focused in content management for the institution web presence: <i>yorku.ca.</i><br><br>During my employment, I developed a Java based program for performing statistical analysis on website requisition data to gain more insight about our web content change over time. This particular project was exciting because it was the first time I used Java for data mining.
         </td>
       </tr>
     </table>
@@ -142,7 +141,38 @@
 
 <div id="job-yorkUni"></div>
 
+<script>
 
+window.onload = function()
+{
+  myMove()
+};
+
+function myMove()
+{
+  var elem = document.getElementById("animate-content");
+  var pos = 0.00;
+  var op = 0.00;
+  var id = setInterval(frame, 24);
+
+  function frame()
+  {
+    if (pos === 8.00)
+    {
+      clearInterval(id);
+      elem.style.opacity = 1;
+    }
+    else
+    {
+      op = op + 0.04;
+      elem.style.opacity = op;
+      pos = pos + 0.25;
+      elem.style.left = pos + "%";
+    }
+  }
+}
+
+</script>
 
 </body>
 </html>

@@ -49,3 +49,17 @@ Turn off parallax scrolling for tablets and phones. Increase the pixels if neede
   background-size: cover;
   background-position: center;
 }
+
+
+
+
+#animate-container
+{
+  position: relative;
+}
+
+#animate-content
+{
+  margin: 0 auto;
+  position: inherit;
+}
