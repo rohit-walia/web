@@ -39,6 +39,15 @@ Turn off parallax scrolling for tablets and phones. Increase the pixels if neede
   padding: 1%;
 }
 
+.outsideMilestone
+{
+  background-image: url("../resources/images/aboutme_pic1.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
  .milestoneContainer
  {
   background-attachment: fixed;
@@ -75,8 +84,9 @@ Turn off parallax scrolling for tablets and phones. Increase the pixels if neede
 }
 
 .progress-bar {
-  background: #4caf50;
+  background: #FF6666;
   width: 100%;
+  border-radius: 0px 0px 30px 30px;
 }
 
 .progress-content-container
