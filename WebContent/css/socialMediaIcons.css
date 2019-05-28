@@ -1,0 +1,18 @@
+ul#socialMediaIcons
+{
+    position: absolute;
+    top: 22px;
+    right: 8%;
+    width: 10%;
+    list-style-type: none;
+    text-align: center;
+    margin: inherit;
+    padding: inherit;
+    z-index: 3;
+}
+
+ul#socialMediaIcons > li
+{
+    display: inline;
+    padding: 2px;
+}
