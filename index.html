@@ -14,58 +14,145 @@
 	gtag('config', 'UA-132753825-1');
 </script>
 
-<!-- On-load function to animate welcome msg -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script>
-	$(window).on('load', function() {
-		$(".welcomeMsg").animate({
-			right : "100px",
-			opacity : 1
-		}, 3000, function() {
-			$("#sub-welcomeMsg").show();
-		});
-	});
-</script>
-
 <meta charset="UTF-8">
 <meta name="keywords" content="Rohit, Rohit Walia, rohits website">
 <meta name="author" content="Rohit Walia">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<script src="WebContent/js/aboutme.js"></script>
 <link rel="stylesheet" type="text/css" href="WebContent/css/styles.css">
 <link rel="stylesheet" type="text/css" href="WebContent/css/elementFontStyling.css">
 <link rel="stylesheet" type="text/css" href="WebContent/css/index.css">
+<link rel="stylesheet" type="text/css" href="WebContent/css/header.css">
+<link rel="stylesheet" type="text/css" href="WebContent/css/socialMediaIcons.css">
+<link rel="stylesheet" type="text/css" href="WebContent/css/about.css">
+<link rel="stylesheet" href="node_modules/animate.css/animate.min.css">
 
 
 <title>Welcome!</title>
 </head>
 
 <body>
-	<header>
-		<nav>
-			<ul>
-				<li id="activeMenu" style="margin-left: 10%"><a href='index.html'>Home</a></li>
-				<li><a href='WebContent/src/about.html'>About Me</a></li>
-				<li><a href='WebContent/src/projects.html'>Projects</a></li>
-				<li><a href='WebContent/src/education.html'>Education</a></li>
-				<li><a href='WebContent/src/contact.html'>Contact</a></li>
-			</ul>
-		</nav>
-	</header>
 
-	<ul id="socialMediaIcons">
-		<li><a href="https://www.facebook.com/rohit.walia.7"><img src="WebContent/resources/images/fbicon.png" alt="fb icon error"
-				style="height: 50px"
-			></a></li>
-		<li><a href="http://www.linkedin.com/in/waliarohit"><img src="WebContent/resources/images/linkedin.png" alt="linkedin icon error"
-				style="height: 50px"
-			></a></li>
-	</ul>
+	<div id="welcomeMsgContainer" class="animated delay-5s fadeOutDown slower">
+		<p id="welcomeMsg" class="animated delay-1s rollIn">
+			<span>Welcome, my name is Rohit Walia</span> <br> <span id="sub-welcomeMsg" style="display: none">and <b
+				style="color: #47baeb"
+			>this</b> is my personal web-space.
+			</span>
+		</p>
+	</div>
 
-	<p class="welcomeMsg">
-		<span>Welcome, my name is Rohit Walia</span> <br> <span id="sub-welcomeMsg" style="display: none">and this is my personal
-			web-space.</span>
-	</p>
+	<div id="aboutMePage" class="animated bounceInUp" style="display: none; position: absolute; top: 0; left: 0; height: 100%; width: 100%">
+		<header>
+			<nav>
+				<ul>
+					<li style="margin-left: 10%"><a href='index.html'>Home</a></li>
+					<li id="activeMenu"><a href='WebContent/src/about.html'>About Me</a></li>
+					<li><a href='WebContent/src/projects.html'>Projects</a></li>
+					<li><a href='WebContent/src/education.html'>Education</a></li>
+					<li><a href='WebContent/src/contact.html'>Contact</a></li>
+				</ul>
+			</nav>
+		</header>
+
+
+		<ul id="socialMediaIcons">
+			<li><a href="https://www.facebook.com/rohit.walia.7"><img src="WebContent/resources/images/fbicon.png" style="height: 50px"></a></li>
+			<li><a href="http://www.linkedin.com/in/waliarohit"><img src="WebContent/resources/images/linkedin.png" style="height: 50px"></a></li>
+		</ul>
+
+
+		<div id="bg-pic" style="height: 40%"></div>
+		<div class="milestoneContainer" style="background-image: url('WebContent/resources/images/aboutme_pic1.jpg')">
+			<table class="milestone">
+				<tr>
+					<th colspan="2"><h1 style="color: white">I'm a handsomely, geeky, technically inclined, Indian-born-Canadian-raised, dapperly
+							dressed... simple man.</h1></th>
+				</tr>
+				<tr>
+					<td width="45%"></td>
+					<td colspan="2">
+						<p style="color: white">
+							I hope you enjoy browsing through my website which is a little mix of both personal and professional experiences.<br> <br>Some
+							background into the development of this website.. I decided to host it directly from my GitHub repository; taking advantage of Git
+							features for my development process. You can find my public code repository at: <a href="https://github.com/rohit-walia/web">GitHub</a>
+						</p>
+					</td>
+				</tr>
+			</table>
+		</div>
+
+		<div id="bg-pic" style="height: 25%"></div>
+		<div id="bg-pic" style="height: 25%"></div>
+
+		<div class="outsideMilestone">
+			<h1
+				style="background-color: transparent; margin: 0; color: #FFCCFF; font-size: 3.5em; position: relative; right: 15%; top: 8px; text-shadow: 3px 3px 5px black; text-align: center;"
+			>
+				I Like Cars... <span style="font-size: 2vw">said every guy out there.</span>
+			</h1>
+		</div>
+
+		<div class="milestoneContainer" style="background-image: url('WebContent/resources/images/aboutme_pic1.jpg')">
+			<table class="milestone" style="background-color: white">
+				<tr>
+					<td style="width: 50%">
+						<p>
+							Instead of midnight walks along the beach, I prefer midnight drives along a curvy mountain road.<br> <br> My interest in
+							cars is really a subset of my interest in understanding how things simply work in the universe. Our built-in curiosity is deeply
+							underrated.<br> <br> If you're a car enthusiant, check out my instagram channel showcasing my photography and love for
+							cars: <a href="https://www.instagram.com/no1scar/" style="text-decoration: none;">@no1scar</a>
+						</p>
+					</td>
+					<td style="padding: 2% 2% 2% 2%"><img id="roro-car" src="WebContent/resources/images/roroInsideCar.jpg"></td>
+				</tr>
+			</table>
+		</div>
+		<div id="bg-pic" style="height: 25%"></div>
+
+
+
+		<!-- progress bar -->
+		<div class="progress-container">
+			<div class="progress-bar" id="pBar"></div>
+			<div class="progress-content-container">
+				<p class="progress-text"></p>
+				<img class="progress-img" src="">
+			</div>
+		</div>
+	</div>
+
+	<!-- On-load function to animate welcome msg -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>
+		$(window).on('load', function() {
+			$("#welcomeMsg").animate({
+				right : "100px",
+				opacity : 1
+			}, 3000, function() {
+				$("#sub-welcomeMsg").show();
+			});
+		});
+
+		var element = document.querySelector('#welcomeMsgContainer');
+		var element1 = document.querySelector('#welcomeMsg');
+		element.addEventListener('animationend', function() {
+			element.addEventListener('animationend', function() {
+				$("#aboutMePage").show();
+			});
+		});
+	</script>
+
+	<script>
+	var element4 = document.querySelector('#aboutMePage');
+	element4.addEventListener('animationend', function() {
+		element4.classList.remove("animated", "bounceInUp");
+	});
+	window.onscroll = function() {
+		updateProgressBar();
+	};
+	</script>
 
 </body>
 </html>
