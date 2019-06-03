@@ -6,12 +6,13 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-132753825-1"></script>
 <script>
 	window.dataLayer = window.dataLayer || [];
-	function gtag() {
-		dataLayer.push(arguments);
-	}
-	gtag('js', new Date());
+    function gtag()
+    {
+	    dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
 
-	gtag('config', 'UA-132753825-1');
+    gtag('config', 'UA-132753825-1');
 </script>
 
 <meta charset="UTF-8">
@@ -29,7 +30,7 @@
 <link rel="stylesheet" href="WebContent/css/animate.min.css">
 
 
-<title>Welcome!</title>
+<title>Rohit W.</title>
 </head>
 
 <body>
@@ -43,19 +44,8 @@
 		</p>
 	</div>
 
-	<div id="aboutMePage" class="animated bounceInUp" style="display: none; position: absolute; top: 0; left: 0; height: 100%; width: 100%">
-		<header>
-			<nav>
-				<ul>
-					<li style="margin-left: 10%"><a href='index.html'>Home</a></li>
-					<li id="activeMenu"><a href='WebContent/src/about.html'>About Me</a></li>
-					<li><a href='WebContent/src/projects.html'>Projects</a></li>
-					<li><a href='WebContent/src/education.html'>Education</a></li>
-					<li><a href='WebContent/src/contact.html'>Contact</a></li>
-				</ul>
-			</nav>
-		</header>
 
+	<div id="aboutMePage" class="animated bounceInUp" style="display: none; position: absolute; top: 0; left: 0; height: 100%; width: 100%">
 
 		<ul id="socialMediaIcons">
 			<li><a href="https://www.facebook.com/rohit.walia.7"><img src="WebContent/resources/images/fbicon.png" style="height: 50px"></a></li>
@@ -126,32 +116,48 @@
 	<!-- On-load function to animate welcome msg -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script>
-		$(window).on('load', function() {
-			$("#welcomeMsg").animate({
-				right : "100px",
-				opacity : 1
-			}, 3000, function() {
-				$("#sub-welcomeMsg").show();
-			});
-		});
-
-		var element = document.querySelector('#welcomeMsgContainer');
-		var element1 = document.querySelector('#welcomeMsg');
-		element.addEventListener('animationend', function() {
-			element.addEventListener('animationend', function() {
-				$("#aboutMePage").show();
-			});
-		});
+		$(window).on('load', function()
+        {
+	        $("#welcomeMsg").animate(
+	        {
+	            right : "100px",
+	            opacity : 1
+	        }, 3000, function()
+	        {
+		        $("#sub-welcomeMsg").show();
+	        });
+        });
 	</script>
 
+
+	<!-- show about me page when welcomeMsg animal is complete -->
 	<script>
-	var element4 = document.querySelector('#aboutMePage');
-	element4.addEventListener('animationend', function() {
-		element4.classList.remove("animated", "bounceInUp");
-	});
-	window.onscroll = function() {
-		updateProgressBar();
-	};
+		var element = document.querySelector('#welcomeMsgContainer');
+        element.addEventListener('animationend', function()
+        {
+	        element.addEventListener('animationend', function()
+	        {
+		        $("#aboutMePage").show();
+	        });
+        });
+	</script>
+
+
+	<script>
+		removeAboutMePageAnimation();
+        window.onscroll = function()
+        {
+	        updateProgressBar();
+        };
+
+        function removeAboutMePageAnimation()
+        {
+	        var element = document.querySelector('#aboutMePage');
+	        element.addEventListener('animationend', function()
+	        {
+		        element.classList.remove("animated", "bounceInUp");
+	        });
+        }
 	</script>
 
 </body>

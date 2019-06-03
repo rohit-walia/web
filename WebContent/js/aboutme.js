@@ -1,5 +1,6 @@
 //get window height in pixels
-var winH = window.innerHeight || document.documentElement.clientHeight || document.getElementsByTagName('body')[0].clientHeight
+var winH = window.innerHeight || document.documentElement.clientHeight
+            || document.getElementsByTagName('body')[0].clientHeight
 
 // get all milestone elements
 var allStones = document.getElementsByClassName("milestone");
@@ -8,63 +9,103 @@ var allStones = document.getElementsByClassName("milestone");
 var milestoneDelta = [];
 
 // progress bar text
-var firstJob = "1st Employer: The Guardian News";
-var longestJob = "Longest employment: 9 years";
+const firstJob = "1st Employer: The Guardian News";
+const longestJob = "Longest employment: 9 years";
 
-function updateProgressBar() {
+function updateProgressBar()
+{
 	// get total scrollale area
 	var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
 
-	// the % of user has scrolled = the number of pixels an element's content is scrolled / height
+	// the % of user has scrolled = the number of pixels an element's content is
+	// scrolled / height
 	var scrolled = (window.scrollY / height) * 100;
 
-	// update progress bar height attribute
-	document.getElementById("pBar").style.height = scrolled + "%";
-
 	// populate delta between milestone and window screen
-	for (var i = 0; i < allStones.length; i++) 
+	for (var i = 0; i < allStones.length; i++)
 	{
 		milestoneDelta[i] = (allStones[i].getBoundingClientRect().top / winH) * 100;
 	}
-
-	// logic
-	if (milestoneDelta[0] > 0 && milestoneDelta[0] < 100) 
+	
+	// set progress bar height equal to the scrolled amount
+	document.getElementById("pBar").style.height = scrolled + "%";
+	
+	// get the elements that will hold the text and img
+	var textElement = document.getElementsByClassName("progress-text")[0];
+	var imgElement = document.getElementsByClassName("progress-img")[0];
+	
+	// controls for text, img, and scrollbar
+	if (milestoneDelta[0] > 39 && milestoneDelta[1] > 177 || milestoneDelta[0] < -100 && milestoneDelta[1] < 35)
 	{
-		updateProgressBarText(firstJob, scrolled, "cyan");
-	} 
-	else if (milestoneDelta[1] > 0 && milestoneDelta[1] < 100) 
+		setTextBackgroundColor(textElement, "transparent");
+		setText(textElement, null);
+		setImg(imgElement, "");
+		setPositionTop(textElement, 0);
+	}
+	else if (milestoneDelta[0] > 0 && milestoneDelta[0] <= 39 || milestoneDelta[0] > 137 && milestoneDelta[1] <= 177)
 	{
-		updateProgressBarText(longestJob, scrolled, "cyan");
-	} 
-	else 
+		setTextBackgroundColor(textElement, "cyan");
+		setText(textElement, firstJob);
+		setImg(imgElement, "WebContent/resources/images/first_job.png");
+		setPositionTop(textElement, scrolled);
+	}
+	else if (milestoneDelta[0] < -30 && milestoneDelta[1] < 100)
 	{
-		updateProgressBarText(null, null, "transparent");
+		setTextBackgroundColor(textElement, "cyan");
+		setText(textElement, longestJob);
+		setImg(imgElement, "");
+		setPositionTop(textElement, scrolled);
+	}
+	else
+	{
+		setTextBackgroundColor(textElement, "transparent");
+		setText(textElement, null);
+		setImg(imgElement, "");
+		setPositionTop(textElement, 0);
 	}
 }
 
-function updateProgressBarText(text, scroll, bgColor) {
-	var textElement = document.getElementsByClassName("progress-text")[0];
-	var imgElement = document.getElementsByClassName("progress-img")[0];
-	var title = document.title;
+/**
+ * Sets an elements background color css property
+ * 
+ * @param element
+ * @param bgColor
+ */
+function setTextBackgroundColor(element, bgColor)
+{
+	element.style.backgroundColor = bgColor;
+}
 
-	textElement.innerHTML = text;
-	textElement.style.top = scroll + "%";
-	textElement.style.backgroundColor = bgColor;
+/**
+ * Sets an elements text via inner HTML
+ * 
+ * @param element
+ * @param text
+ */
+function setText(element, text)
+{
+	element.innerHTML = text;
+}
 
-	if (text === firstJob) 
-	{
-		if (title === "About me") 
-		{
-			imgElement.src = "../resources/images/first_job.png";
-		} 
-		else 
-		{
-			imgElement.src = "WebContent/resources/images/first_job.png";
-		}
-	} 
-	else 
-	{
-		imgElement.src = "";
-	}
+/**
+ * Sets an elements src value
+ * 
+ * @param element img element
+ * @param imgPath the src path
+ */
+function setImg(element, imgPath)
+{
 
+	element.src = imgPath;
+}
+
+/**
+ * Sets an elements css property 'top' to the user scolled amount
+ * 
+ * @param element
+ * @param scroll the amount screen has scrolled
+ */
+function setPositionTop(element, scroll)
+{
+	element.style.top = scroll + "%";
 }
