@@ -1,5 +1,3 @@
-console.log("helloooiiii");
-
 //get window height in pixels
 var winH = window.innerHeight || document.documentElement.clientHeight
             || document.getElementsByTagName('body')[0].clientHeight
