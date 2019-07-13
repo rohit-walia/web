@@ -52,3 +52,9 @@ p, span
  {
     font-family: "Raleway", "calibri light", "Arial";
  }
+ 
+ .quote
+ {
+ 	font-size: 1.0vw;
+ 	font-style: italic;
+ }

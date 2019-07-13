@@ -1,3 +1,5 @@
+console.log("helloooiiii");
+
 //get window height in pixels
 var winH = window.innerHeight || document.documentElement.clientHeight
             || document.getElementsByTagName('body')[0].clientHeight
@@ -26,14 +28,14 @@ function updateProgressBar()
 	{
 		milestoneDelta[i] = (allStones[i].getBoundingClientRect().top / winH) * 100;
 	}
-	
+
 	// set progress bar height equal to the scrolled amount
 	document.getElementById("pBar").style.height = scrolled + "%";
-	
+
 	// get the elements that will hold the text and img
 	var textElement = document.getElementsByClassName("progress-text")[0];
 	var imgElement = document.getElementsByClassName("progress-img")[0];
-	
+
 	// controls for text, img, and scrollbar
 	if (milestoneDelta[0] > 39 && milestoneDelta[1] > 177 || milestoneDelta[0] < -100 && milestoneDelta[1] < 35)
 	{
@@ -67,7 +69,7 @@ function updateProgressBar()
 
 /**
  * Sets an elements background color css property
- * 
+ *
  * @param element
  * @param bgColor
  */
@@ -78,7 +80,7 @@ function setTextBackgroundColor(element, bgColor)
 
 /**
  * Sets an elements text via inner HTML
- * 
+ *
  * @param element
  * @param text
  */
@@ -89,7 +91,7 @@ function setText(element, text)
 
 /**
  * Sets an elements src value
- * 
+ *
  * @param element img element
  * @param imgPath the src path
  */
@@ -101,7 +103,7 @@ function setImg(element, imgPath)
 
 /**
  * Sets an elements css property 'top' to the user scolled amount
- * 
+ *
  * @param element
  * @param scroll the amount screen has scrolled
  */
