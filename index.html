@@ -6,13 +6,12 @@
 <script async="true" src="https://www.googletagmanager.com/gtag/js?id=UA-132753825-1"></script>
 <script>
 	window.dataLayer = window.dataLayer || [];
-    function gtag()
-    {
-	    dataLayer.push(arguments);
-    }
-    gtag('js', new Date());
+	function gtag() {
+		dataLayer.push(arguments);
+	}
+	gtag('js', new Date());
 
-    gtag('config', 'UA-132753825-1');
+	gtag('config', 'UA-132753825-1');
 </script>
 
 <meta charset="UTF-8">
@@ -37,9 +36,7 @@
 
 	<div id="welcomeMsgContainer" class="animated delay-5s fadeOutDown slower">
 		<p id="welcomeMsg" class="animated delay-1s rollIn">
-			<span>Welcome, my name is Rohit Walia</span> <br> <span id="sub-welcomeMsg" style="display: none">and <b
-				style="color: #47baeb"
-			>this</b> is my personal web-space.
+			<span>Welcome, my name is Rohit Walia</span> <br> <span id="sub-welcomeMsg" style="display: none">and <b style="color: #47baeb">this</b> is my personal web-space.
 			</span>
 		</p>
 	</div>
@@ -54,48 +51,43 @@
 
 
 		<div id="bg-pic" style="height: 30%"></div>
-		
-		
+
+
 		<div class="milestoneContainer" style="background-image: url('WebContent/resources/images/aboutme_pic1.jpg')">
 			<table class="milestone">
 				<tr>
-					<th colspan="2"><h1 style="color: white">Handsomely, geeky, technically inclined, Indian-born-Canadian-raised, dapperly
-							dressed, ready to impress... simple man.</h1></th>
+					<th colspan="2">
+						<h1 style="color: white">Handsomely, geeky, technically inclined, Indian-born-Canadian-raised, dapperly dressed, ready to impress... simple man.</h1>
+					</th>
 				</tr>
 				<tr>
 					<td width="45%"></td>
 					<td colspan="2">
-						<p style="color: white">
-							I hope you enjoy browsing through my website which is a little mix of both personal and professional experiences.<br> <br>Some
-							background into the development of this website.. I decided to host it directly from my GitHub repository; taking advantage of Git
-							features for my development process. You can find my public code repository at: <a href="https://github.com/rohit-walia/web">GitHub</a>
-						</p>
+						<p style="color: white">I hope you enjoy browsing through my website which is a little mix of both personal and professional experiences.</p>
 					</td>
 				</tr>
 			</table>
 		</div>
 
 
-		<div id="bg-pic" style="height: 25%"></div>
-		<div id="bg-pic" style="height: 25%"></div>
+		<div id="bg-pic" style="height: 50%"></div>
 
 
+		<!-- ABOUT ME -->
 		<div class="outsideMilestone">
 			<h1
-				style="background-color: transparent; margin: 0; color: #FFCCFF; font-size: 3.5em; position: relative; right: 20%; top: 8px; text-shadow: 3px 3px 5px black; text-align: center;"
-			> About me!
-			</h1>
+				style="background-color: transparent; margin: 0; color: #FFCCFF; font-size: 3.5em; position: relative; right: 20%; top: 8px; text-shadow: 3px 3px 5px black; text-align: center;">
+				About me!</h1>
 		</div>
-
 
 		<div class="milestoneContainer" style="background-image: url('WebContent/resources/images/aboutme_pic1.jpg')">
 			<table class="milestone" style="background-color: white">
 				<tr>
 					<td style="width: 50%">
 						<ul>
-							<li>I am a software engineer with a focus in testing and automation</li>
+							<li>I am a software developer with a focus in test automation</li>
 							<li>My hobbies include working on cars and playing basketball</li>
-							<li>I have a fear of heights and ironically also have gone sky-diving</li>
+							<li>I have a fear of heights and ironically also have crossed out sky-diving from my bucket-list</li>
 						</ul>
 					</td>
 					<td style="padding: 2% 2% 2% 2%"><img id="roro-car" src="WebContent/resources/images/roroInsideCar.jpg"></td>
@@ -108,23 +100,7 @@
 			</table>
 		</div>
 
-<!-- 		<div class="milestoneContainer" style="background-image: url('WebContent/resources/images/aboutme_pic1.jpg')">
-			<table class="milestone" style="background-color: white">
-				<tr>
-					<td style="width: 50%">
-						<p>
-							Instead of midnight walks along the beach, I prefer midnight drives along a curvy mountain road.<br> <br> My interest in
-							cars is really a subset of my interest in understanding how things simply work in the universe. Our built-in curiosity is deeply
-							underrated.<br> <br> If you're a car enthusiant, check out my instagram channel showcasing my photography and love for
-							cars: <a href="https://www.instagram.com/no1scar/" style="text-decoration: none;">@no1scar</a>
-						</p>
-					</td>
-					<td style="padding: 2% 2% 2% 2%"><img id="roro-car" src="WebContent/resources/images/roroInsideCar.jpg"></td>
-				</tr>
-			</table>
-		</div> -->
-		
-		
+		<!-- parallax scrolling picture -->
 		<div id="bg-pic" style="height: 25%"></div>
 
 
@@ -141,48 +117,40 @@
 	<!-- On-load function to animate welcome msg -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script>
-		$(window).on('load', function() //window.onload = function() {...}
-        {
-	        $("#welcomeMsg").animate(
-	        {
-	            right : "100px",
-	            opacity : 1
-	        }, 3000, function()
-	        {
-		        $("#sub-welcomeMsg").show();
-	        });
-        });
+		$(window).on('load', function() {
+			$("#welcomeMsg").animate({
+				right : "100px",
+				opacity : 1
+			}, 3000, function() {
+				$("#sub-welcomeMsg").show();
+			});
+		});
 	</script>
 
 
 	<!-- show about me page when welcomeMsg animal is complete -->
 	<script>
 		var element = document.querySelector('#welcomeMsgContainer');
-        element.addEventListener('animationend', function()
-        {
-	        element.addEventListener('animationend', function()
-	        {
-		        $("#aboutMePage").show();
-	        });
-        });
+		element.addEventListener('animationend', function() {
+			element.addEventListener('animationend', function() {
+				$("#aboutMePage").show();
+			});
+		});
 	</script>
 
 
 	<script>
 		removeAboutMePageAnimation();
-        window.onscroll = function()
-        {
-	        updateProgressBar();
-        };
+		window.onscroll = function() {
+			updateProgressBar();
+		};
 
-        function removeAboutMePageAnimation()
-        {
-	        var element = document.querySelector('#aboutMePage');
-	        element.addEventListener('animationend', function()
-	        {
-		        element.classList.remove("animated", "bounceInUp");
-	        });
-        }
+		function removeAboutMePageAnimation() {
+			var element = document.querySelector('#aboutMePage');
+			element.addEventListener('animationend', function() {
+				element.classList.remove("animated", "bounceInUp");
+			});
+		}
 	</script>
 
 </body>
