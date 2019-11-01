@@ -6,7 +6,8 @@
 <script async="true" src="https://www.googletagmanager.com/gtag/js?id=UA-132753825-1"></script>
 <script>
 	window.dataLayer = window.dataLayer || [];
-	function gtag() {
+	function gtag()
+	{
 		dataLayer.push(arguments);
 	}
 	gtag('js', new Date());
@@ -117,11 +118,14 @@
 	<!-- On-load function to animate welcome msg -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script>
-		$(window).on('load', function() {
-			$("#welcomeMsg").animate({
+		$(window).on('load', function()
+		{
+			$("#welcomeMsg").animate(
+			{
 				right : "100px",
 				opacity : 1
-			}, 3000, function() {
+			}, 3000, function()
+			{
 				$("#sub-welcomeMsg").show();
 			});
 		});
@@ -131,8 +135,10 @@
 	<!-- show about me page when welcomeMsg animal is complete -->
 	<script>
 		var element = document.querySelector('#welcomeMsgContainer');
-		element.addEventListener('animationend', function() {
-			element.addEventListener('animationend', function() {
+		element.addEventListener('animationend', function()
+		{
+			element.addEventListener('animationend', function()
+			{
 				$("#aboutMePage").show();
 			});
 		});
@@ -141,13 +147,16 @@
 
 	<script>
 		removeAboutMePageAnimation();
-		window.onscroll = function() {
+		window.onscroll = function()
+		{
 			updateProgressBar();
 		};
 
-		function removeAboutMePageAnimation() {
+		function removeAboutMePageAnimation()
+		{
 			var element = document.querySelector('#aboutMePage');
-			element.addEventListener('animationend', function() {
+			element.addEventListener('animationend', function()
+			{
 				element.classList.remove("animated", "bounceInUp");
 			});
 		}
