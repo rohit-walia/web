@@ -30,37 +30,14 @@
 <script src="../js/projects.js"></script>
 </head>
 
-<body>
-
-	<header>
-		<nav>
-			<ul>
-				<li style="margin-left: 10%"><a href='../../index.html'>Home</a></li>
-				<li><a href='about.html'>About Me</a></li>
-				<li id="activeMenu"><a href='projects.html'>Projects</a></li>
-				<li><a href='education.html'>Education</a></li>
-				<li><a href='contact.html'>Contact</a></li>
-			</ul>
-		</nav>
-	</header>
-
-	<ul id="socialMediaIcons">
-		<li><a href="https://www.facebook.com/rohit.walia.7"> <img src="../resources/images/fbicon.png" alt="fb icon error"
-				style="height: 3em"
-			>
-		</a></li>
-		<li><a href="http://www.linkedin.com/in/waliarohit"> <img src="../resources/images/linkedin.png" alt="linkedin icon error"
-				style="height: 3em"
-			>
-		</a></li>
-	</ul>
+<body onload="showPyramid()">
 
 	<div id="topContainer">
 
 		<div id="projectListContainer">
 			<ul id="projectList">
-				<li><button onclick="showPyramid()">Dynamic Pyramid Structure</button></li>
-				<li><button onclick="showAutomation()">Extending The Selenium WebElement</button></li>
+				<li><button onclick="showPyramid()">Pryamid Puzzle</button></li>
+				<li><button onclick="showHackathon2019()">Hackathon 2019 Demo</button></li>
 			</ul>
 		</div>
 
@@ -73,6 +50,16 @@
 					</div>
 
 					<table>
+						<tr>
+							<td><h3>Objective:</h3></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td>
+								<p>To master writing algorithms, which is the foundational skill for any <i>efficient</i> computer program.
+								You must write an algorithm dedicated to draw a pyramid strucutre. Simple, right..?</p>
+							</td>
+						</tr>
 						<tr>
 							<td><h3>Rules:</h3></td>
 						</tr>
@@ -94,7 +81,7 @@
 								</p>
 								<p>
 									<img src="../resources/images/checkmark-circle-light-blue.svg" alt="checkmark" style="height: 3vw"> Design the structure to
-									be dynamic in size
+									be dynamic in height
 								</p>
 								<p>
 									<img src="../resources/images/checkmark-circle-light-blue.svg" alt="checkmark" style="height: 3vw"> You can't use nested
@@ -228,8 +215,31 @@
 				</div>
 				<!-- dynamicPyramid -->
 
-				<div id="automationFramework">
-					<h1>Under construction</h1>
+				<div id="hackathon2019">
+					<tr>
+						<td><h3>Alexa is old news. Say hello to Donna!</h3></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>
+							<p>For this Hackathon hosted by PointClickCare, me and my team mates decided to create our own version of 
+							Amazon's Alexa but solely dedicated to work with the PointClickCare application. 
+							We named her after the celebrity 'Donna Paulson' who stared in tv show 'Suits'.</p>
+						</td>
+					</tr>
+						
+					<video width="1024" height="576" controls>
+  						<source src="../resources/videos/hackathon-noclickcare.mp4" type="video/mp4">
+						Your browser does not support the video tag.
+					</video>
+					
+					<tr>
+						<td></td>
+						<td>
+							<p>To make the magic happen, we used open source automated testing framework Selenium to control the web browser.
+							Automation code was written in Java. Facial and Speech recognition was done through google could APIs.</p>
+						</td>
+					</tr>
 				</div>
 
 			</div>

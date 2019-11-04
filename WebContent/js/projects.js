@@ -2,7 +2,7 @@
 function showPyramid()
 {
 
-  var other = document.getElementById("automationFramework");
+  var other = document.getElementById("hackathon2019");
   other.style.display = "none";
 
   var element = document.getElementById("dynamicPyramid");
@@ -11,26 +11,19 @@ function showPyramid()
   {
     element.style.display = "block";
   }
-  else
-  {
-    element.style.display = "none";
-  }
+
 }
 
 
-function showAutomation()
+function showHackathon2019()
 {
   var other = document.getElementById("dynamicPyramid");
   other.style.display = "none";
 
-  var element = document.getElementById("automationFramework");
+  var element = document.getElementById("hackathon2019");
 
   if (element.style.display === "none")
   {
     element.style.display = "block";
-  }
-  else
-  {
-    element.style.display = "none";
   }
 }
