@@ -1,5 +1,30 @@
-#welcomeMsg
-{
+#welcomeMsg {
 	text-align: center;
 	padding-top: 200px;
+}
+
+.nav {
+	/* Removes the bullets */
+	list-style-type: none;
+		/* removes underscore */
+	text-decoration:none; 
+}
+
+.nav li {
+	/* remove the line breaks before and after each list item */
+	display: inline-block;
+	
+	/* font styling, size, and color */
+	font-family: "Raleway", "Trebuchet MS", "Arial";
+	font-size: 3vw;
+	
+	/* spacing between the list items */
+	margin-right: 10px;
+	margin-left: 10px;
+}
+
+.nav li a {
+			/* removes underscore */
+	text-decoration:none; 
+		color: white;
 }
